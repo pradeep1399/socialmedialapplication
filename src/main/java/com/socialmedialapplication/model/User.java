@@ -1,13 +1,19 @@
 package com.socialmedialapplication.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 
+@Entity
 public class User {
+    @Id
     private Integer id;
     private String name;
     private LocalDate birthDate;
 
     public User(Integer id, String name, LocalDate birthDate) {
+        super();
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
