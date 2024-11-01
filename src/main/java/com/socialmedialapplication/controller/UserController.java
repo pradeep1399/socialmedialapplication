@@ -29,7 +29,7 @@ public class UserController {
     public User retriveUsers(@PathVariable int id){
         User user = userDeoService.findOne(id);
         if(user == null){
-            throw new UserNotFoundException("id"+id);
+            throw new UserNotFoundException("id: "+id);
         }
         return user;
     }
